@@ -24,12 +24,20 @@
   	        <div>
                <h5 class="h5 mb-3 fw-normal text-center">--------------- atau mendaftar dengan ---------------</h5>
             </div>
+
+<!-- Form Register -->
             <form action="/register" method="post">
               @csrf
 
-<!-- Form Register -->
+
+            @if(session()->has('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session('success')}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            @endif
               <div class="form-floating">
-              <input type="text" name="name" class="form-control rounded-top @error('name') is-invalid @enderror" id="name" placeholder="name" value="{{ old('name') }}">
+              <input type="text" name="name" class="form-control rounded-top @error('name') is-invalid @enderror" id="name" placeholder="name" required value="{{ old('name') }}">
                 <label for="name">Nama</label>
                 @error('name')
                 <div class="invalid-feedback">
@@ -39,7 +47,7 @@
                </div>
 
               <div class="form-floating">
-                <input type="text" name="username" class="form-control @error('username') is-invalid  @enderror" id="username" placeholder="username" value="{{ old('username') }}">
+                <input type="text" name="username" class="form-control @error('username') is-invalid  @enderror" id="username" placeholder="username" required value="{{ old('username') }}">
                 <label for="username">Username</label>
                 @error('username')
                 <div class="invalid-feedback">
@@ -59,7 +67,7 @@
               </div>
 
               <div class="form-floating">
-                 <input type="password" name="password" class="form-control rounded-bottom @error('password') is-invalid @enderror" id="password" placeholder="Password">
+                 <input type="password" name="password" class="form-control rounded-bottom @error('password') is-invalid @enderror" id="password" placeholder="Password" required>
                 <label for="password">Password</label>
                 @error('password')
                 <div class="invalid-feedback">
