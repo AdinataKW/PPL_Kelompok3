@@ -1,5 +1,7 @@
 @extends('dashboard.index')
 
+@section('judul','Rekam Medis')
+
 @section('content')
 <div>
     <h2>Dashboard Content</h2>
