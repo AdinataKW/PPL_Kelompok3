@@ -19,6 +19,7 @@ use App\Http\Controllers\DashboardController;
 Route::get('/', function () {
     return view('index');
 });
+
 Route::get('/pemain', function () {
     return view('dashboard.pemain');
 });
@@ -47,3 +48,6 @@ Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('dashboard', [DashboardController::class, 'index'])->middleware('auth');
+Route::get('/pemain', [DashboardController::class, 'pemain']);
+Route::get('/rekammedis', [DashboardController::class, 'rekammedis']);
+Route::get('/rumahsakit', [DashboardController::class, 'rumahsakit']);
