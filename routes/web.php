@@ -19,6 +19,15 @@ use App\Http\Controllers\DashboardController;
 Route::get('/', function () {
     return view('index');
 });
+Route::get('/pemain', function () {
+    return view('dashboard.pemain');
+});
+Route::get('/rekammedis', function () {
+    return view('dashboard.rekammedis');
+});
+Route::get('/rumahsakit', function () {
+    return view('dashboard.rumahsakit');
+});
 
 Route::get('login', function () {
     return view('login');
