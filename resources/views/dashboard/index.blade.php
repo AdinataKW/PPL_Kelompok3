@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Dashboard Example</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Style CSS -->
+  <!-- Style CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- Navigation -->
@@ -19,28 +21,28 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-        
-            <li class="nav-item active">
-                <a class="nav-link text-dark" href="#">Apps
-                    <span class="sr-only">(current)</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" href="#">Kalender</a>
-            </li>
-        
-        
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="img/notification.png" class="icon-user">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="img/user.png" class="icon-user">
-                </a>
-            </li>
-        
+
+        <li class="nav-item active">
+          <a class="nav-link text-dark" href="#">Apps
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#">Kalender</a>
+        </li>
+
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <img src="img/notification.png" class="icon-user">
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <img src="img/user.png" class="icon-user">
+          </a>
+        </li>
+
       </ul>
     </div>
   </nav>
@@ -59,17 +61,17 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="pemain">
                 Pemain
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="rekammedis">
                 Rekam Medis
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="rumahsakit">
                 Rumah Sakit
               </a>
             </li>
@@ -94,7 +96,7 @@
         </div>
 
         <!-- Your content goes here -->
-
+        @yield('content')
       </main>
     </div>
   </div>
@@ -104,4 +106,5 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
